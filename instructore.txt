@@ -1,0 +1,3 @@
+npx convex dev
+npx shadcn-ui@latest add dialog
+npx shadcn-ui@latest add tooltip
