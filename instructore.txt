@@ -1,3 +1,11 @@
 npx convex dev
 npx shadcn-ui@latest add dialog
 npx shadcn-ui@latest add tooltip
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add sonner
+npm i date-fns
+npx shadcn-ui@latest add skeleton
+npx shadcn-ui@latest add dropdown-menu
+npx shadcn-ui@latest add alert-dialog
+npm i zustand
+
