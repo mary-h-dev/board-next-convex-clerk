@@ -15,6 +15,8 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { Footer } from "./footer";
 import { Overlay } from "./overlay";
 
+
+
 interface BoardCardProps {
   id: string;
   title: string;
@@ -38,17 +40,26 @@ export const BoardCard = ({
 }: BoardCardProps) => {
   const { userId } = useAuth();
 
+
   const authorLabel = userId === authorId ? "You" : authorName;
+
+
   const createdAtLabel = formatDistanceToNow(createdAt, {
     addSuffix: true,
   });
 
+
   const { mutate: onFavorite, pending: pendingFavorite } = useApiMutation(
     api.board.favorite
   );
+
   const { mutate: onUnfavorite, pending: pendingUnfavorite } = useApiMutation(
     api.board.unfavorite
   );
+
+
+
+
 
   const toggleFavorite = () => {
     if (isFavorite) {
@@ -58,6 +69,9 @@ export const BoardCard = ({
     }
   };
 
+
+
+  
   return (
     <Link href={`/board/${id}`}>
       <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
@@ -90,6 +104,8 @@ export const BoardCard = ({
     </Link>
   );
 };
+
+
 
 BoardCard.Skeleton = function BoardCardSkeleton() {
   return (

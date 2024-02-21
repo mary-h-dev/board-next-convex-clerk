@@ -8,4 +8,10 @@ npx shadcn-ui@latest add skeleton
 npx shadcn-ui@latest add dropdown-menu
 npx shadcn-ui@latest add alert-dialog
 npm i zustand
+npm i convex-helpers
+npm i @liveblocks/client
+npx create-liveblocks-app@latest --init --framework react
+npm install @liveblocks/node
+npx shadcn-ui@latest add avatar
+
 
