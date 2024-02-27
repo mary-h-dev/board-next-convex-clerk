@@ -13,5 +13,6 @@ npm i @liveblocks/client
 npx create-liveblocks-app@latest --init --framework react
 npm install @liveblocks/node
 npx shadcn-ui@latest add avatar
-
+npm install react-contenteditable
+npm i perfect-freehand
 

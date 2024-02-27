@@ -29,6 +29,8 @@ export const BoardList = ({
     ...query,
   });
 
+  console.log(data)
+
   if (data === undefined) {
     return (
       <div>

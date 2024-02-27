@@ -23,10 +23,10 @@ export async function POST(request: Request) {
   const user = await currentUser();
 
 
-  console.log("AUTH_INFO",{
-    authorization,
-    user
-  })
+  // console.log("AUTH_INFO",{
+  //   authorization,
+  //   user
+  // })
 
   if (!authorization || !user) {
     return new Response("Unauthorized", { status: 403 });
@@ -36,12 +36,12 @@ export async function POST(request: Request) {
   const board = await convex.query(api.board.get, { id: room });
 
 
-console.log("AUTH_INFO",{
-  room,
-  board,
-  boardOrgId: board?.orgId,
-  userOrgID: authorization.orgId
-})
+// console.log("AUTH_INFO",{
+//   room,
+//   board,
+//   boardOrgId: board?.orgId,
+//   userOrgID: authorization.orgId
+// })
 
 
 
@@ -55,7 +55,7 @@ console.log("AUTH_INFO",{
   };
 
 
-  console.log({userInfo})
+  // console.log({userInfo})
 
 
   
