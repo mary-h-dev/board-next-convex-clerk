@@ -13,7 +13,7 @@ const convex = new ConvexHttpClient(
 
 
 const liveblocks = new Liveblocks({
-  secret: "sk_dev_8BMboQv_GPp8PgSo2iWOwn4NM4bMHzVHQQWLBRPcU9CZvuhGAcXC4xSNSJ753UES",
+  secret: process.env.LIVEBLOCKS_SECRET_KEY!,
 });
 
 
