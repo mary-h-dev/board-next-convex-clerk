@@ -2,6 +2,8 @@ import { v } from "convex/values";
 
 import { mutation, query } from "./_generated/server";
 
+
+
 const images = [
   "/placeholders/1.svg",
   "/placeholders/2.svg",
@@ -14,6 +16,8 @@ const images = [
   "/placeholders/9.svg",
   "/placeholders/10.svg",
 ];
+
+
 
 export const create = mutation({
   args: {
@@ -43,6 +47,8 @@ export const create = mutation({
   },
 });
 
+
+
 export const remove = mutation({
   args: { id: v.id("boards") },
   handler: async (ctx, args) => {
@@ -71,6 +77,9 @@ export const remove = mutation({
   },
 });
 
+
+
+
 export const update = mutation({
   args: { id: v.id("boards"), title: v.string() },
   handler: async (ctx, args) => {
@@ -97,6 +106,9 @@ export const update = mutation({
     return board;
   },
 });
+
+
+
 
 export const favorite = mutation({
   args: { id: v.id("boards"), orgId: v.string() },
@@ -174,6 +186,8 @@ export const unfavorite = mutation({
     return board;
   },
 });
+
+
 
 export const get = query({
   args: { id: v.id("boards") },
